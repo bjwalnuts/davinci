@@ -588,7 +588,7 @@ export class SourceList extends React.PureComponent<
   }
 }
 
-const mapDispatchToProps = (dispatch: Dispatch<SourceActionType>) => ({
+const mapDispatchToProps = (dispatch) => ({
   onLoadSources: (projectId: number) =>
     dispatch(SourceActions.loadSources(projectId)),
   onLoadSourceDetail: (sourceId: number, resolve: (source: ISource) => void) =>

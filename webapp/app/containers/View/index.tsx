@@ -346,7 +346,7 @@ export class ViewList extends React.PureComponent<IViewListProps, IViewListState
 
 }
 
-const mapDispatchToProps = (dispatch: Dispatch<ViewActionType>) => ({
+const mapDispatchToProps = (dispatch) => ({
   onLoadViews: (projectId) => dispatch(ViewActions.loadViews(projectId)),
   onDeleteView: (viewId, resolve) => dispatch(ViewActions.deleteView(viewId, resolve)),
   onCopyView: (view, resolve) => dispatch(ViewActions.copyView(view, resolve)),

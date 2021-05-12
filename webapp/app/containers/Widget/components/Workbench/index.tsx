@@ -726,7 +726,7 @@ export class Workbench extends React.Component<
                 onLoadColumnDistinctValue={onLoadColumnDistinctValue}
                 onLoadViews={this.loadViews}
                 onLoadViewDetail={onLoadViewDetail}
-              />
+              /> 
               <div className={styles.viewPanel}>
                 <div className={styles.widgetBlock}>
                   <Widget

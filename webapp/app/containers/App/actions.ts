@@ -32,6 +32,7 @@ import {
   SHOW_NAVIGATOR,
   HIDE_NAVIGATOR,
   CHECK_NAME,
+
   ACTIVE,
   ACTIVE_SUCCESS,
   ACTIVE_ERROR,
@@ -215,7 +216,7 @@ export function hideNavigator() {
   }
 }
 
-export function checkNameAction(id, name, type, params, resolve, reject) {
+export function checkNameAction(id:any, name:any, type:any, params:any, resolve:void, reject:void) {
   return {
     type: CHECK_NAME,
     payload: {
@@ -229,7 +230,7 @@ export function checkNameAction(id, name, type, params, resolve, reject) {
   }
 }
 
-export function checkNameUniqueAction(pathname, data, resolve, reject) {
+export function checkNameUniqueAction(pathname:string, data:any, resolve:()=>void, reject:(err: string)=>void) {
   return {
     type: CHECK_NAME,
     payload: {

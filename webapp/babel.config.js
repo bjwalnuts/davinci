@@ -3,6 +3,7 @@ module.exports = {
     /[\\\/]core-js/,
     /webpack[\\\/]buildin/
   ],
+  compact: false,
   overrides: [{
     test: "./node_modules",
   }],
