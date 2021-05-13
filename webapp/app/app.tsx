@@ -86,12 +86,14 @@ import configureStore from './configureStore'
 
 
 const initialState = {}
-const store = configureStore(initialState, history)
+const store = configureStore(initialState, history)   //model
 const MOUNT_NODE = document.getElementById('app')
 
+ //Provider 跨组件状态共享
+ // ConnectedRouter 绑定react-router到redux的组件
 const render = (messages) => {
   ReactDOM.render(
-    <Provider store={store}>
+     <Provider store={store}>    
       <LanguageProvider messages={messages}>
         <ConfigProvider locale={zh_CN}>
           <ConnectedRouter history={history}>

@@ -18,7 +18,7 @@
  * >>
  */
 
-import React, { useContext, useCallback, useRef, useState } from 'react'
+import React, { useContext, useCallback, useRef, useState,createRef } from 'react'
 import { EditorContext } from '../context'
 
 import { ElementTypes } from '../Element'
@@ -36,7 +36,7 @@ const tailStyle: Partial<FormItemProps> = {
 }
 
 const Link: React.FC = () => {
-  const form = useRef<WrappedFormUtils>()
+  const form = createRef<WrappedFormUtils>()
   const { insertElement } = useContext(EditorContext)
   const [visible, setVisible] = useState(false)
 
@@ -68,7 +68,7 @@ const Link: React.FC = () => {
 
 export default Link
 
-interface ILinkFormProps extends FormComponentProps {
+interface ILinkFormProps extends FormComponentProps {  
   onSave: (values: { text: string; href: string }) => void
 }
 
